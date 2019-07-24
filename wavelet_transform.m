@@ -4,7 +4,7 @@ Fs = 1200; %Hz
 
 eeg_signal = EEGSeg_Ch{1,1}{1,1}(1,:)-mean(EEGSeg_Ch{1,1}{1,1}(1,:));
 emg_signal = EMGSeg_Ch{1,1}{1,1}(1,:)-mean(EMGSeg_Ch{1,1}{1,1}(1,:));
-force_signal = ForceSeg_Ch{1,1}{1,1}(1,:)-mean(ForceSeg_Ch{1,1}{1,1}(1,:));
+force_signal = ForceSeg_Ch{1,1}{1,1}(1,:);
 N_samples = length(eeg_signal);
 n = (2^nextpow2(N_samples) - N_samples) / 2;
 
