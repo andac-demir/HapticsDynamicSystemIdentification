@@ -146,29 +146,8 @@ train_data[0].head(10) # first 10 samples of the first trial
 
     Reading and processing in parallel.
     
-
-
-    HBox(children=(IntProgress(value=0, max=11), HTML(value='')))
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     Total number of trials of all the conditions in the file: 17648
     
-
-
-
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -854,103 +833,7 @@ test_wavelet = []
 for i, participant in enumerate(test_data):
     test_wavelet.append(get_wavelet(participant))
     print('Wavelet transform ready for participant %s' %str(i+1))
-```
-
-
-    HBox(children=(IntProgress(value=0, max=8822), HTML(value='')))
-
-
-    
-    Wavelet transform ready for train data
-    
-
-
-    HBox(children=(IntProgress(value=0, max=920), HTML(value='')))
-
-
-    
-    Wavelet transform ready for participant 1
-    
-
-
-    HBox(children=(IntProgress(value=0, max=642), HTML(value='')))
-
-
-    
-    Wavelet transform ready for participant 2
-    
-
-
-    HBox(children=(IntProgress(value=0, max=668), HTML(value='')))
-
-
-    
-    Wavelet transform ready for participant 3
-    
-
-
-    HBox(children=(IntProgress(value=0, max=1403), HTML(value='')))
-
-
-    
-    Wavelet transform ready for participant 4
-    
-
-
-    HBox(children=(IntProgress(value=0, max=1134), HTML(value='')))
-
-
-    
-    Wavelet transform ready for participant 5
-    
-
-
-    HBox(children=(IntProgress(value=0, max=1109), HTML(value='')))
-
-
-    
-    Wavelet transform ready for participant 6
-    
-
-
-    HBox(children=(IntProgress(value=0, max=602), HTML(value='')))
-
-
-    
-    Wavelet transform ready for participant 7
-    
-
-
-    HBox(children=(IntProgress(value=0, max=356), HTML(value='')))
-
-
-    
-    Wavelet transform ready for participant 8
-    
-
-
-    HBox(children=(IntProgress(value=0, max=922), HTML(value='')))
-
-
-    
-    Wavelet transform ready for participant 9
-    
-
-
-    HBox(children=(IntProgress(value=0, max=552), HTML(value='')))
-
-
-    
-    Wavelet transform ready for participant 10
-    
-
-
-    HBox(children=(IntProgress(value=0, max=518), HTML(value='')))
-
-
-    
-    Wavelet transform ready for participant 11
-    
+```  
 
 ### Model Lag Order Selection 
 
@@ -1010,62 +893,7 @@ filename = 'VARResults/all_lagOrder.npy'
 save_bic(train_wavelet_df.iloc[:,eeg_ind_wl+emg_ind_wl+force_ind_wl], filename)
 print("Lag order selection completed for all.")
 ```
-
-
-    HBox(children=(IntProgress(value=0, max=20), HTML(value='')))
-
-
-    
-    Lag order selection completed for EEG only.
-    
-
-
-    HBox(children=(IntProgress(value=0, max=20), HTML(value='')))
-
-
-    
-    Lag order selection completed for EMG only.
-    
-
-
-    HBox(children=(IntProgress(value=0, max=20), HTML(value='')))
-
-
-    
-    Lag order selection completed for Force only.
-    
-
-
-    HBox(children=(IntProgress(value=0, max=20), HTML(value='')))
-
-
-    
-    Lag order selection completed for EEG and EMG.
-    
-
-
-    HBox(children=(IntProgress(value=0, max=20), HTML(value='')))
-
-
-    
-    Lag order selection completed for EEG and Force.
-    
-
-
-    HBox(children=(IntProgress(value=0, max=20), HTML(value='')))
-
-
-    
-    Lag order selection completed for EMG and Force.
-    
-
-
-    HBox(children=(IntProgress(value=0, max=20), HTML(value='')))
-
-
-    
-    Lag order selection completed for all.
-    
+  
 
 ### Model Lag Order Results
 
@@ -1270,34 +1098,6 @@ if use_saved == False:
                                test_wavelet, eeg_ind_wl+emg_ind_wl+force_ind_wl)
     np.save('VARResults/forecasted_all.npy', forecasted_all)
 ```
-
-
-    HBox(children=(IntProgress(value=0, max=11), HTML(value='')))
-
-
-
-    HBox(children=(IntProgress(value=0, max=11), HTML(value='')))
-
-
-
-    HBox(children=(IntProgress(value=0, max=11), HTML(value='')))
-
-
-
-    HBox(children=(IntProgress(value=0, max=11), HTML(value='')))
-
-
-
-    HBox(children=(IntProgress(value=0, max=11), HTML(value='')))
-
-
-
-    HBox(children=(IntProgress(value=0, max=11), HTML(value='')))
-
-
-
-    HBox(children=(IntProgress(value=0, max=11), HTML(value='')))
-
 
 
 ```python
@@ -2106,10 +1906,6 @@ for participant_id in tqdm_notebook(range(num_participants), ascii=True):
                            'force': np.asarray(force_errs)})
     err_df.to_pickle("VARResults/err_bars_forAll_id%i.pkl" %participant_id)
 ```
-
-
-    HBox(children=(IntProgress(value=0, max=11), HTML(value='')))
-
 
 
 ```python
