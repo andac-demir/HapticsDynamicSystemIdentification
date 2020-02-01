@@ -1,3 +1,8 @@
+# Dynamic System Identification Modeling for Haptic Feedback in VR/AR 
+------------------------------------
+
+### What is it?
+
 We develop and compare three different dynamic system identification models to identify relationships among simultaneously  recorded electroencephalography (EEG), electromyography (EMG) and force signals, measured from 12 subjects performing haptic interactions with 3D printed surfaces having different textures. 
 
 We train the first one of these dynamic models in time domain, the second one in multiresolution sparse wavelet domain and the third one in a hybrid time-wavelet domain. Our procedure to train a dynamic model in time domain can be divided into two stages. In the first stage, we solve for the maximum likelihood (ML) parameter vector of a parsimonious integrated vector autoregression model(VAR) and estimate the latency between endogenous time variables, utilizing a grid searchover the log likelihood scores. In the second stage, we explore the modality dependencies between synchronized EEG, EMG and haptic interactions by training VAR models of the same structure. We use our knowledge of signal latency, lag orders and modality dependencies to predict EEG and haptic forces from any provided different combination of EEG, EMG and force measurements.  
