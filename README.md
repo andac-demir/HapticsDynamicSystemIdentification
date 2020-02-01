@@ -1,4 +1,4 @@
-# Dynamic System Identification Modeling for Haptic Feedback in VR/AR Environments
+# Dynamic System Identification Modeling for Haptic Interactions in VR/AR Environments
 ------------------------------------
 
 ### What is it?
